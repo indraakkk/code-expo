@@ -1,18 +1,16 @@
 import React from 'react'
-import {
-  StyleSheet,
-  View,
-} from 'react-native'
+import { StyleSheet, View, StatusBar } from 'react-native'
 
-class VerticalStackLayoutFlex extends React.Component{
+class VerticalStackLayoutFlex extends React.Component {
   render() {
-  return(
-    <View style={styles.container}>
-      <View style={[styles.box, styles.box1]}></View>
-      <View style={[styles.box, styles.box2]}></View>
-      <View style={[styles.box, styles.box3]}></View>
-    </View>
-  )
+    return (
+      <View style={styles.container}>
+        <StatusBar hidden={true} />
+        <View style={[styles.box, styles.box1]} />
+        <View style={[styles.box, styles.box2]} />
+        <View style={[styles.box, styles.box3]} />
+      </View>
+    )
   }
 }
 

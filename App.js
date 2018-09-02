@@ -6,24 +6,27 @@ import React from 'react'
 // import Positioning from './components/Positioning'
 // import HorizontalStackLayout from './components/HorizontalStackLayout'
 // import JustifyContent from './components/JustifyContent'
-import AlignItems from './components/AlignItems'
+// import AlignItems from './components/AlignItems'
+// import GridLayout from './components/GridLayout'
+import LoginView from './components/welcomescreen/LoginView'
 
-class App extends React.Component{
+class App extends React.Component {
   render() {
-    return(
+    return (
       // <VerticalStackLayoutFlex />
       // <VerticalStackLayoutHeaderContentFooter />
       // <VerticalStackLayoutManual />
       // <Positioning />
       // <HorizontalStackLayout />
       // <JustifyContent />
-      <AlignItems />
+      // <AlignItems />
+      // <GridLayout />
+      <LoginView />
     )
   }
 }
 
 export default App
-
 
 // import React from "react";
 // import { StatusBar, StyleSheet } from "react-native";
@@ -72,7 +75,7 @@ export default App
 //     return (
 //       <Container>
 //         <StatusBar hidden={true} />
-//         <Header 
+//         <Header
 //         style={{ backgroundColor: 'black' }}
 //         androidStatusBarColor="black">
 //           <Left>
@@ -115,7 +118,6 @@ export default App
 //     color: 'white',
 //   }
 // })
-
 
 // import React, { Component } from 'react'
 // import { StatusBar, Image, StyleSheet } from 'react-native'
@@ -166,9 +168,9 @@ export default App
 //   render() {
 //     return(
 //       <Container>
-        
+
 //       {/* hide status bar */}
-//       <StatusBar hidden= {true} />  
+//       <StatusBar hidden= {true} />
 
 //         <View style={{alignItems: 'center'}}>
 //           <Greeting name='Indra' />
@@ -190,7 +192,6 @@ export default App
 //     )
 //   }
 // }
-
 
 // // css style
 // const styles = StyleSheet.create({

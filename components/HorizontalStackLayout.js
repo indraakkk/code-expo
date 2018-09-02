@@ -1,16 +1,14 @@
 import React from 'react'
-import {
-  StyleSheet,
-  View
-} from 'react-native'
+import { StyleSheet, View, StatusBar } from 'react-native'
 
-class HoriontalStackLayout extends React.Component{
-  render(){
+class HoriontalStackLayout extends React.Component {
+  render() {
     return (
       <View style={styles.container}>
-        <View style={[styles.box, styles.box1]}></View>
-        <View style={[styles.box, styles.box2]}></View>
-        <View style={[styles.box, styles.box3]}></View>
+        <StatusBar hidden={true} />
+        <View style={[styles.box, styles.box1]} />
+        <View style={[styles.box, styles.box2]} />
+        <View style={[styles.box, styles.box3]} />
       </View>
     )
   }
@@ -30,7 +28,7 @@ const styles = StyleSheet.create({
   },
   box2: {
     flex: 1,
-    backgroundColor: '#8BC34A' 
+    backgroundColor: '#8BC34A'
   },
   box3: {
     flex: 1,

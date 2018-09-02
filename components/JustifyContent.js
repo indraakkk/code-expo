@@ -1,22 +1,19 @@
 import React from 'react'
-import {
-  StyleSheet,
-  View,
-  Dimensions
-} from 'react-native'
+import { StyleSheet, View, Dimensions, StatusBar } from 'react-native'
 
 var { height } = Dimensions.get('window')
 
 var box_count = 3
 var box_height = height / box_count - 20
 
-class JustifyContent extends React.Component{
+class JustifyContent extends React.Component {
   render() {
-    return(
+    return (
       <View style={styles.container}>
-        <View style={[styles.box, styles.box1]}></View>
-        <View style={[styles.box, styles.box2]}></View>
-        <View style={[styles.box, styles.box3]}></View>
+        <StatusBar hidden={true} />
+        <View style={[styles.box, styles.box1]} />
+        <View style={[styles.box, styles.box2]} />
+        <View style={[styles.box, styles.box3]} />
       </View>
     )
   }
@@ -33,7 +30,7 @@ const styles = StyleSheet.create({
     height: box_height
   },
   box1: {
-    backgroundColor: '#2196F3' 
+    backgroundColor: '#2196F3'
   },
   box2: {
     backgroundColor: '#8BC34A'
@@ -43,4 +40,4 @@ const styles = StyleSheet.create({
   }
 })
 
- export default JustifyContent
+export default JustifyContent

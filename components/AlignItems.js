@@ -1,23 +1,22 @@
 import React from 'react'
-import {
-  StyleSheet,
-  View
-} from 'react-native'
+import { StyleSheet, View, StatusBar } from 'react-native'
 
-class AlignItems extends React.Component{
+class AlignItems extends React.Component {
   render() {
     return (
       <View style={styles.wrapper}>
+        <StatusBar hidden={true} />
+
         <View style={styles.container}>
-          <View style={[styles.box, styles.box1]}></View>
-          <View style={[styles.box, styles.box2]}></View>
-          <View style={[styles.box, styles.box3]}></View>
+          <View style={[styles.box, styles.box1]} />
+          <View style={[styles.box, styles.box2]} />
+          <View style={[styles.box, styles.box3]} />
         </View>
 
         <View style={styles.container2}>
-          <View style={[styles.box, styles.box1]}></View>
-          <View style={[styles.box, styles.box2]}></View>
-          <View style={[styles.box, styles.box3]}></View>
+          <View style={[styles.box, styles.box1]} />
+          <View style={[styles.box, styles.box2]} />
+          <View style={[styles.box, styles.box3]} />
         </View>
       </View>
     )
@@ -29,7 +28,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   container: {
-    flex: .5,
+    flex: 0.5,
     flexDirection: 'row',
     justifyContent: 'center', //flex-end, center
     alignItems: 'center',
@@ -37,7 +36,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#000'
   },
   container2: {
-    flex: .5,
+    flex: 0.5,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center' //flex-end, center
@@ -55,7 +54,6 @@ const styles = StyleSheet.create({
   box3: {
     backgroundColor: '#e3aa1a'
   }
-
 })
 
 export default AlignItems

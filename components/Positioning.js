@@ -1,42 +1,37 @@
 import React from 'react'
-import {
-  StyleSheet,
-  View,
-} from 'react-native'
+import { StyleSheet, View, StatusBar } from 'react-native'
 
-class Positioning extends React.Component{
+class Positioning extends React.Component {
   render() {
-  return(
-    <View style={styles.container}>
-      
-      {/* big orange box_position left */}
-      <View style={styles.left}>
-        <View style={[styles.box, styles.big_orange_box]}></View>
-      </View>
-
-      {/* big black, red, gray, green & orange box_position middle */}
-      <View style={styles.middle}>
-        
-        <View style={[styles.box, styles.big_black_box]}>
-          <View style={[styles.inner_box, styles.red_box]}></View>
+    return (
+      <View style={styles.container}>
+        <StatusBar hidden={true} />
+        {/* big orange box_position left */}
+        <View style={styles.left}>
+          <View style={[styles.box, styles.big_orange_box]} />
         </View>
-        <View style={[styles.box, styles.big_gray_box]}></View>
 
-        <View style={[styles.box, styles.big_green_box]}>
-          <View style={[styles.inner_box, styles.orange_box]}></View>
+        {/* big black, red, gray, green & orange box_position middle */}
+        <View style={styles.middle}>
+          <View style={[styles.box, styles.big_black_box]}>
+            <View style={[styles.inner_box, styles.red_box]} />
+          </View>
+          <View style={[styles.box, styles.big_gray_box]} />
+
+          <View style={[styles.box, styles.big_green_box]}>
+            <View style={[styles.inner_box, styles.orange_box]} />
+          </View>
+        </View>
+
+        {/* right position */}
+        <View style={styles.right}>
+          <View style={[styles.box, styles.big_lightblue_box]}>
+            <View style={[styles.inner_box, styles.black_box]} />
+          </View>
+          <View style={[styles.inner_box, styles.purple_box]} />
         </View>
       </View>
-
-      {/* right position */}
-      <View style={styles.right}>
-        <View style={[styles.box, styles.big_lightblue_box]}>
-          <View style={[styles.inner_box, styles.black_box]}></View>
-        </View>
-        <View style={[styles.inner_box, styles.purple_box]}></View>
-      </View>
-
-    </View>
-  )
+    )
   }
 }
 
