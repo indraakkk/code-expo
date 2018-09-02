@@ -1,93 +1,120 @@
-import React from "react";
-import { StatusBar, StyleSheet } from "react-native";
-import {
-  Accordion,
-  Container,
-  Header,
-  Title,
-  Content,
-  Footer,
-  FooterTab,
-  Button,
-  Left,
-  Right,
-  Body,
-  Icon,
-  Text
-} from 'native-base';
-import Expo from 'expo';
+import React from 'react'
 
-const dataArray = [
-  { title: "First Element", content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." },
-  { title: "Second Element", content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." },
-  { title: "Third Element", content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." }
-]
+// import VerticalStackLayoutFlex from './components/VerticalStackLayoutFlex'
+// import VerticalStackLayoutHeaderContentFooter from './components/VerticalStackLayoutHeaderContentFooter'
+// import VerticalStackLayoutManual from './components/VerticalStackLayoutManual'
+// import Positioning from './components/Positioning'
+// import HorizontalStackLayout from './components/HorizontalStackLayout'
+// import JustifyContent from './components/JustifyContent'
+import AlignItems from './components/AlignItems'
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { loading: true };
-  }
-
-  async componentWillMount() {
-    await Expo.Font.loadAsync({
-      Roboto: require("native-base/Fonts/Roboto.ttf"),
-      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
-      Ionicons: require("@expo/vector-icons/fonts/Ionicons.ttf"),
-    });
-    this.setState({ loading: false });
-  }
-
+class App extends React.Component{
   render() {
-    if (this.state.loading) {
-      return <Expo.AppLoading />;
-    }
-    return (
-      <Container>
-        <StatusBar hidden={true} />
-        <Header 
-        style={{ backgroundColor: 'black' }}
-        androidStatusBarColor="black">
-          <Left>
-            <Button transparent>
-              <Icon name='menu' />
-            </Button>
-          </Left>
-          <Body>
-            <Title>Poison App</Title>
-          </Body>
-          <Right />
-        </Header>
-        <Content padder>
-          <Accordion
-            dataArray={dataArray}
-            headerStyle={{ backgroundColor: '#e8e8e8' }}
-            contentStyle={{ backgroundColor: '#f7f7f7' }}
-            icon='add'
-            expandedIcon='remove'
-            iconStyle={{ color: 'blue' }}
-            expandedIconStyle={{ color: 'red' }}
-            expanded={0}
-          />
-        </Content>
-        {/* <Footer>
-          <FooterTab dark>
-            <Button full>
-              <Text>Footer</Text>
-            </Button>
-          </FooterTab>
-        </Footer> */}
-      </Container>
-    );
+    return(
+      // <VerticalStackLayoutFlex />
+      // <VerticalStackLayoutHeaderContentFooter />
+      // <VerticalStackLayoutManual />
+      // <Positioning />
+      // <HorizontalStackLayout />
+      // <JustifyContent />
+      <AlignItems />
+    )
   }
 }
 
-const styles = StyleSheet.create({
+export default App
 
-  textWhite: {
-    color: 'white',
-  }
-})
+
+// import React from "react";
+// import { StatusBar, StyleSheet } from "react-native";
+// import {
+//   Accordion,
+//   Container,
+//   Header,
+//   Title,
+//   Content,
+//   Footer,
+//   FooterTab,
+//   Button,
+//   Left,
+//   Right,
+//   Body,
+//   Icon,
+//   Text
+// } from 'native-base';
+// import Expo from 'expo';
+
+// const dataArray = [
+//   { title: "First Element", content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." },
+//   { title: "Second Element", content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." },
+//   { title: "Third Element", content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." }
+// ]
+
+// export default class App extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = { loading: true };
+//   }
+
+//   async componentWillMount() {
+//     await Expo.Font.loadAsync({
+//       Roboto: require("native-base/Fonts/Roboto.ttf"),
+//       Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
+//       Ionicons: require("@expo/vector-icons/fonts/Ionicons.ttf"),
+//     });
+//     this.setState({ loading: false });
+//   }
+
+//   render() {
+//     if (this.state.loading) {
+//       return <Expo.AppLoading />;
+//     }
+//     return (
+//       <Container>
+//         <StatusBar hidden={true} />
+//         <Header 
+//         style={{ backgroundColor: 'black' }}
+//         androidStatusBarColor="black">
+//           <Left>
+//             <Button transparent>
+//               <Icon name='menu' />
+//             </Button>
+//           </Left>
+//           <Body>
+//             <Title>Poison App</Title>
+//           </Body>
+//           <Right />
+//         </Header>
+//         <Content padder>
+//           <Accordion
+//             dataArray={dataArray}
+//             headerStyle={{ backgroundColor: '#e8e8e8' }}
+//             contentStyle={{ backgroundColor: '#f7f7f7' }}
+//             icon='add'
+//             expandedIcon='remove'
+//             iconStyle={{ color: 'blue' }}
+//             expandedIconStyle={{ color: 'red' }}
+//             expanded={0}
+//           />
+//         </Content>
+//         {/* <Footer>
+//           <FooterTab dark>
+//             <Button full>
+//               <Text>Footer</Text>
+//             </Button>
+//           </FooterTab>
+//         </Footer> */}
+//       </Container>
+//     );
+//   }
+// }
+
+// const styles = StyleSheet.create({
+
+//   textWhite: {
+//     color: 'white',
+//   }
+// })
 
 
 // import React, { Component } from 'react'
