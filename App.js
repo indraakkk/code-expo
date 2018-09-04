@@ -8,7 +8,7 @@ import React from 'react'
 // import JustifyContent from './components/JustifyContent'
 // import AlignItems from './components/AlignItems'
 // import GridLayout from './components/GridLayout'
-import LoginView from './components/welcomescreen/LoginView'
+import LoginView from './components/login/LoginView'
 
 class App extends React.Component {
   render() {
